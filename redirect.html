@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Redirect</title>
+</head>
+
+<body onload="sendMessage()">
+    <h1>Payment Redirect Page</h1>
+    <script>
+        window.onload(async () => {
+            window.ReactNativeWebView.postMessage('transactionDone');
+        })
+        function sendMessage(){
+            window.ReactNativeWebView.postMessage('transactionDone');
+        }
+    </script>
+</body>
+
+</html>
