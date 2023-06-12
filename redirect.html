@@ -11,12 +11,10 @@
 <body onload="sendMessage()">
     <h1>Payment Redirect Page</h1>
     <script>
-        window.onload(async () => {
-            window.ReactNativeWebView.postMessage('transactionDone');
-        })
-        function sendMessage(){
+        function sendMessageToRNWebView(){
             window.ReactNativeWebView.postMessage('transactionDone');
         }
+
         const queryString = window.location.search
         const urlParams = new URLSearchParams(queryString)
         const product = urlParams.get('transactionId')
