@@ -14,6 +14,9 @@
         function sendMessageToRNWebView(){
             window.ReactNativeWebView.postMessage('transactionDone');
         }
+        window.onload(()=>{
+            window.ReactNativeWebView.postMessage('transactionDone');
+        })
         const queryString = window.location.search
         const urlParams = new URLSearchParams(queryString)
         const product = urlParams.get('transactionId')
